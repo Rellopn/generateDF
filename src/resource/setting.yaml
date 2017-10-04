@@ -1,0 +1,24 @@
+tempName:
+  - login:
+    - rePwd
+    - login
+  - sale
+  - refund
+generalAbsPath:
+   - /Users/sr/Documents/testRest
+   - /Users/sr/Documents/testMapper
+   - /Users/sr/Documents/testXml
+templateName:
+  - templateRest.temp,java,com.maryun.ruogucaotang.restful.app.franchisee
+  - templateMapper.temp,java,com.maryun.ruogucaotang.mapper.app.franchisee
+  - templateXml.temp,xml,com.maryun.ruogucaotang.mapper.app.franchisee
+templateType:
+  - java
+  - java
+  - xml
+author:
+  sr
+
+#  - /Users/sr/Documents/ruogucaotang/01Develop/ruogucaotangServer/src/main/java/com/maryun/ruogucaotang/restful/app/franchisee
+#  - /Users/sr/Documents/ruogucaotang/01Develop/ruogucaotangServer/src/main/java/com/maryun/ruogucaotang/mapper/app/franchisee
+#  - /Users/sr/Documents/ruogucaotang/01Develop/ruogucaotangServer/src/main/resources/mapper/ruogucaotang/app/franchisee

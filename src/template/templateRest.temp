@@ -1,0 +1,31 @@
+package #{nowPath};
+
+import com.maryun.model.PageData;
+import #{UmapperPath}.#{UmapperName}Mapper;
+import com.maryun.utils.WebResult;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import javax.annotation.Resource;
+
+/**
+ * @Descriptkon
+ *
+ * @author #{author} #{date}
+ */
+@RestController
+@RequestMapping("/app/#{restName}eRestful")
+public class #{UrestName}Restful extends BaseRestful{
+    @Resource
+    private #{UmapperName}Mapper homeThreeMapper;
+
+    /**
+     *
+     * @param pd
+     * @return
+     **/
+    @RequestMapping("")
+    public PageData template(@RequestBody PageData pd) {
+        return WebResult.requestSuccess();
+    }
+}

@@ -1,0 +1,12 @@
+package #{nowPath};
+
+import org.apache.ibatis.annotations.Mapper;
+
+/**
+ * @author #{author} #{date}
+ * 
+ */
+@Mapper
+public interface #{UmapperName}Mapper {
+    
+}
