@@ -1,7 +1,8 @@
 package #{nowPath};
 
 import com.maryun.model.PageData;
-import #{UmapperPath}.#{UmapperName}Mapper;
+import com.maryun.restful.base.BaseRestful;
+import #{mapperPackage}.#{importPath}.#{UmapperName}Mapper;
 import com.maryun.utils.WebResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

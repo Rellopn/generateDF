@@ -1,18 +1,14 @@
 package runClass;
 
-import general.General;
 import general.GeneralDirOrFile;
 import general.LoadSetting;
 import general.NameAndPath;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.Map;
 
 public class RunClass {
-    public void generalStart() throws IOException {
+    public void generalStart() throws Exception {
 
         //加载setting
         LoadSetting loadSetting = new LoadSetting();
@@ -32,12 +28,15 @@ public class RunClass {
         while (iterator.hasNext()) {
             String next = iterator.next();
             String[] s = nameAndPath1.get(next).split(",");
+            if (s.length<4){
+                s[3]="";
+            }
             //生成文件夹或者文件
-            generalDirOrFile.deepSearchAndMake(loadSetting.generalDirOrFile,next ,s[0],s[1],s[2],"");
+            generalDirOrFile.deepSearchAndMake(loadSetting.generalDirOrFile,next ,s[0],s[1],s[2],"",s[3]);
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         new RunClass().generalStart();
     }
 }

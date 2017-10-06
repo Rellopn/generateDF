@@ -43,7 +43,7 @@ public class LoadSetting {
         Map load=new HashMap();
         try {
 
-            InputStream resourceAsStream = General.class.getResourceAsStream("/resource/setting.yaml");
+            InputStream resourceAsStream = LoadSetting.class.getResourceAsStream("/resource/setting.yaml");
             Yaml y = new Yaml();
             load= (Map) y.load(resourceAsStream);
 

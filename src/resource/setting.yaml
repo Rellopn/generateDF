@@ -1,21 +1,20 @@
 tempName:
-  - login:
-    - rePwd
-    - login
-  - sale
-  - refund
+  - login1:
+    - rePwd1
+  - sale1
 generalAbsPath:
-   - /Users/sr/Documents/testRest
-   - /Users/sr/Documents/testMapper
-   - /Users/sr/Documents/testXml
+#   - /Users/sr/Documents/testRest
+#   - /Users/sr/Documents/testMapper
+#   - /Users/sr/Documents/testXml
+  - /Users/sr/Documents/ruogucaotang/01Develop/ruogucaotangServer/src/main/java/com/maryun/ruogucaotang/restful/app/franchisee
+  - /Users/sr/Documents/ruogucaotang/01Develop/ruogucaotangServer/src/main/java/com/maryun/ruogucaotang/mapper/app/franchisee
+  - /Users/sr/Documents/ruogucaotang/01Develop/ruogucaotangServer/src/main/resources/mapper/ruogucaotang/app/franchisee
 templateName:
-  - templateRest.temp,java,com.maryun.ruogucaotang.restful.app.franchisee
-  - templateMapper.temp,java,com.maryun.ruogucaotang.mapper.app.franchisee
-  - templateXml.temp,xml,com.maryun.ruogucaotang.mapper.app.franchisee
-templateType:
-  - java
-  - java
-  - xml
+  - templateRest.temp,java,com.maryun.ruogucaotang.restful.app.franchisee,Restful
+  - templateMapper.temp,java,com.maryun.ruogucaotang.mapper.app.franchisee,Mapper
+  - templateXml.temp,xml,com.maryun.ruogucaotang.mapper.app.franchisee,Mapper
+mapperPackage:
+  com.maryun.ruogucaotang.mapper.app.franchisee
 author:
   sr
 
