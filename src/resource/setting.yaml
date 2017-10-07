@@ -6,12 +6,6 @@ generalAbsPath:
    - /Users/sr/Documents/testRest
    - /Users/sr/Documents/testMapper
    - /Users/sr/Documents/testXml
-<<<<<<< HEAD
-#  - /Users/sr/Documents/ruogucaotang/01Develop/ruogucaotangServer/src/main/java/com/maryun/ruogucaotang/restful/app/franchisee
-#  - /Users/sr/Documents/ruogucaotang/01Develop/ruogucaotangServer/src/main/java/com/maryun/ruogucaotang/mapper/app/franchisee
-#  - /Users/sr/Documents/ruogucaotang/01Develop/ruogucaotangServer/src/main/resources/mapper/ruogucaotang/app/franchisee
-=======
->>>>>>> refs/remotes/origin/master
 templateName:
   - templateRest.temp,java,com.maryun.ruogucaotang.restful.app.franchisee,Restful
   - templateMapper.temp,java,com.maryun.ruogucaotang.mapper.app.franchisee,Mapper

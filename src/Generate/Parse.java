@@ -35,7 +35,7 @@ public class Parse{
             char[] src = text.toCharArray();
             int offset = 0;
             int start = text.indexOf(openToken, offset);
-            //这里是循环解析参数，参考GenericTokenParserTest,比如可以解析${first_name} ${initial} ${last_name} reporting.这样的字符串,里面有3个 ${}
+            //这里是循环解析参数.
             while (start > -1) {
                 int end = text.indexOf(closeToken, start);
                 if (end == -1) {
