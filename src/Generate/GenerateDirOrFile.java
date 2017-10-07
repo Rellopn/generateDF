@@ -1,4 +1,4 @@
-package general;
+package Generate;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -10,11 +10,11 @@ import java.util.Map;
  * @author sr
  * 2017/10/3
  */
-public class GeneralDirOrFile {
+public class GenerateDirOrFile {
     String separator;
     NameAndPath nameAndPath;
 
-    public GeneralDirOrFile(NameAndPath nameAndPath) {
+    public GenerateDirOrFile(NameAndPath nameAndPath) {
         this.nameAndPath = nameAndPath;
         this.separator = File.separator;
     }
@@ -22,7 +22,7 @@ public class GeneralDirOrFile {
     /**
      * 建立文件夹及文件
      *
-     * @param waitForGeneral list本层到结构
+     * @param waitForGenerate list本层到结构
      * @param path           生成文件到绝对路径
      * @param tempName       找哪一个temp
      * @param type           生成到文件类型
@@ -30,61 +30,61 @@ public class GeneralDirOrFile {
      * @param willAddPath    java基础包地址后面的每层的地址，根据每一层的名字叠加
      * @throws IOException
      */
-    public void deepSearchAndMake(ArrayList waitForGeneral, String path, String tempName, String type, String genrealPath, String willAddPath,String exName) throws Exception {
+    public void deepSearchAndMake(ArrayList waitForGenerate, String path, String tempName, String type, String genrealPath, String willAddPath,String exName) throws Exception {
 
         boolean hasOneMap = false;
-        for (int i = 0; i < waitForGeneral.size(); i++) {
-            if (waitForGeneral.get(i) instanceof Map) {
+        for (int i = 0; i < waitForGenerate.size(); i++) {
+            if (waitForGenerate.get(i) instanceof Map) {
                 hasOneMap = true;
             }
         }
         if (hasOneMap) {
-            for (int i = 0; i < waitForGeneral.size(); i++) {
+            for (int i = 0; i < waitForGenerate.size(); i++) {
 
-                if (waitForGeneral.get(i) instanceof Map) {
-                    String addPath = path + separator + ((Map) waitForGeneral.get(i)).keySet().iterator().next();
+                if (waitForGenerate.get(i) instanceof Map) {
+                    String addPath = path + separator + ((Map) waitForGenerate.get(i)).keySet().iterator().next();
                     System.out.println("建立文件夹：" + addPath);
                     File f = new File(addPath);
                     if (!f.exists()) {
                         f.mkdir();
                     }
-                    for (Object s : ((Map) waitForGeneral.get(i)).values()) {
+                    for (Object s : ((Map) waitForGenerate.get(i)).values()) {
                         //获取到这一层目录到名字，因为只有一个名字，直接取第一个就好类。
                         String nowPack = "";
-                        for (Object b : ((Map) waitForGeneral.get(i)).keySet()) {
+                        for (Object b : ((Map) waitForGenerate.get(i)).keySet()) {
                             nowPack = (String) b;
                         }
                         System.err.println(((ArrayList) s));
                         deepSearchAndMake((ArrayList) s, addPath, tempName, type, genrealPath, genrealPath + "." + willAddPath + nowPack,exName);
                     }
                 } else {
-                    System.out.println("建立文件夹 文件：" + path + separator + waitForGeneral.get(i));
-                    String addPath = path + separator + waitForGeneral.get(i);
-                    makeAndWrite(waitForGeneral, genrealPath, willAddPath, path, i, type, addPath, tempName,exName);
+                    System.out.println("建立文件夹 文件：" + path + separator + waitForGenerate.get(i));
+                    String addPath = path + separator + waitForGenerate.get(i);
+                    makeAndWrite(waitForGenerate, genrealPath, willAddPath, path, i, type, addPath, tempName,exName);
                 }
             }
         } else {
-            for (int i = 0; i < waitForGeneral.size(); i++) {
-                String addPath = path + separator + waitForGeneral.get(i);
-                makeAndWrite(waitForGeneral, genrealPath, willAddPath, path, i, type, addPath, tempName,exName);
+            for (int i = 0; i < waitForGenerate.size(); i++) {
+                String addPath = path + separator + waitForGenerate.get(i);
+                makeAndWrite(waitForGenerate, genrealPath, willAddPath, path, i, type, addPath, tempName,exName);
             }
             return;
         }
     }
 
-    public void makeAndWrite(ArrayList waitForGeneral, String genrealPath, String willAddPath, String path, int i, String type, String addPath, String tempName,String exName) throws Exception {
+    public void makeAndWrite(ArrayList waitForGenerate, String genrealPath, String willAddPath, String path, int i, String type, String addPath, String tempName,String exName) throws Exception {
         System.out.println("建立文件夹及文件：" + addPath);
         File f = new File(addPath);
         f.mkdir();
-        HandlerImpl handler = new HandlerImpl((String) waitForGeneral.get(i));
+        HandlerImpl handler = new HandlerImpl((String) waitForGenerate.get(i));
         if (willAddPath.equals("")) {
-            handler.setThisPath(genrealPath + "." + waitForGeneral.get(i));
-            handler.setImportPath(waitForGeneral.get(i) + "");
+            handler.setThisPath(genrealPath + "." + waitForGenerate.get(i));
+            handler.setImportPath(waitForGenerate.get(i) + "");
         } else {
-            handler.setThisPath(willAddPath + "." + waitForGeneral.get(i));
-            String temp = willAddPath + "." + waitForGeneral.get(i);
+            handler.setThisPath(willAddPath + "." + waitForGenerate.get(i));
+            String temp = willAddPath + "." + waitForGenerate.get(i);
             System.out.println(genrealPath);
-            String nowPath = (willAddPath + "." + waitForGeneral.get(i)).split(genrealPath + ".")[1];
+            String nowPath = (willAddPath + "." + waitForGenerate.get(i)).split(genrealPath + ".")[1];
             handler.setImportPath(nowPath);
 
         }
@@ -97,7 +97,7 @@ public class GeneralDirOrFile {
             j = f1.read();
         }
         String parse = ss.parse(s);
-        writeTelplate(path, (String) waitForGeneral.get(i), "." + type, parse,exName);
+        writeTelplate(path, (String) waitForGenerate.get(i), "." + type, parse,exName);
         f1.close();
     }
 

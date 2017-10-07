@@ -1,4 +1,4 @@
-package general;
+package Generate;
 
 /**
  * 解析#{}中的字符串并替换
