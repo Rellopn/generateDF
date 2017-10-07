@@ -1,7 +1,7 @@
 tempName:
-  - login1:
-    - rePwd1
-  - sale1
+  - login:
+    - rePwd
+  - sale
 generalAbsPath:
    - /Users/sr/Documents/testRest
    - /Users/sr/Documents/testMapper
