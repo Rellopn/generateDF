@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 /**
  * @Descriptkon
  *
- * @author #{author} #{date}
+ * @author #{author} #{date}#{secondAu}
  */
 @RestController
 @RequestMapping("/app/#{restName}eRestful")

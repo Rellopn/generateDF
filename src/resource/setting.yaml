@@ -1,11 +1,17 @@
 tempName:
   - login:
     - rePwd
-  - sale
+    - verification
+    - userSetting
+  - service:
+    - getSomething
+    - setSomething:
+      - manyDir1
+      - mangDir2
 generalAbsPath:
-   - /Users/sr/Documents/testRest
-   - /Users/sr/Documents/testMapper
-   - /Users/sr/Documents/testXml
+   - /Users/sr/Documents/demoDir/testRestful
+   - /Users/sr/Documents/demoDir/testMapper
+   - /Users/sr/Documents/demoDir/testXmlMapper
 templateName:
   - templateRest.temp,java,com.maryun.ruogucaotang.restful.app.franchisee,Restful
   - templateMapper.temp,java,com.maryun.ruogucaotang.mapper.app.franchisee,Mapper
@@ -14,3 +20,5 @@ mapperPackage:
   com.maryun.ruogucaotang.mapper.app.franchisee
 author:
   sr
+secondAu:
+  syl
