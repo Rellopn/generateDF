@@ -62,3 +62,5 @@ public class #{UrestName}Restful extends BaseRestful{
 - `#{date}`:当前日期。
 - 任何的`#{}`中的第一个字母为大写的"U"，替换后的内容首字母会大写。
 - 如果`#{}`的内容没有在`setting.yaml`中定义过的话，将会以当前的文件夹的名字替换。
+## 最后说两句
+如果使用中有任何问题请联系我[](614046330@qq.com)或者提交issue。
