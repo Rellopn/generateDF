@@ -1,12 +1,12 @@
 # 生成目录结构及文件的工具
---------------
 ## 工具运行结果
+--------------
   在`setting.yaml`中定义生成的目录结构<br/>
 <img src='https://github.com/Rellopn/generateDF/blob/master/img/img3.png' height='400px' weight='450px'/><br/>
   生成的文件夹及文件:
 <img src='https://github.com/Rellopn/generateDF/blob/master/img/img2.png' height='700px' weight='600px' />
---------------
 ## 如何使用
+--------------
 **配置`setting.yaml`:**<br/>
 <img src='https://github.com/Rellopn/generateDF/blob/master/img/img1.png' height='400px' weight='450px'/><br/>
 1. 要生成的目录结构，目录层级可以无限延伸。
@@ -17,8 +17,8 @@
   *包名。<br/>
   *文件名后缀。<br/>
 4. 自定义内容，将替换模版内#{}内同名的字符
------------------
 ## 模版说明
+-----------------
 模版文件在`/template`包下。
 下面举一个例子🌰：
 ```
