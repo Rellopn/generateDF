@@ -7,16 +7,16 @@
 <img src='https://github.com/Rellopn/generateDF/blob/master/img/img2.png' height='700px' weight='600px' />
 ## 如何使用
 --------------
-1. 配置`setting.yaml`:<br/>
+**配置`setting.yaml`:**<br/>
 <img src='https://github.com/Rellopn/generateDF/blob/master/img/img1.png' height='400px' weight='450px'/><br/>
-- 要生成的目录结构，目录层级可以无限延伸。
-- 在哪些目录下生成1所定义的目录。注意要从根目录写起，如果是在windows下则例如：`D:\demoDir\testRestful\`。
-- 要与2所定义的根目录数量保持一致，如果2要在三个目录下生成，则3也要定义三次。下面以每一个逗号为分隔分成1，2，3，4来介绍。
-  1.使用的模版文件--参照模版说明。
-  2.后缀名。
-  3.包名。
-  4.文件名后缀。
-- 自定义内容，将替换模版内#{}内同名的字符 --参考模版说明
+1. 要生成的目录结构，目录层级可以无限延伸。
+2. 在哪些目录下生成1所定义的目录。注意要从根目录写起，如果是在windows下则例如：`D:\demoDir\testRestful\`。
+3. 要与2所定义的根目录数量保持一致，如果2要在三个目录下生成，则3也要定义三次。下面以每一个逗号为分隔来介绍。<br/>
+  *使用的模版文件。<br/>
+  *后缀名<br/>
+  *包名。<br/>
+  *文件名后缀。<br/>
+4. 自定义内容，将替换模版内#{}内同名的字符 --参考模版说明
 ## 模版说明
 -----------------
 模版文件在`/template`包下。
