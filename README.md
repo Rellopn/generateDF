@@ -15,7 +15,7 @@
     &nbsp;&nbsp;&nbsp;&nbsp;2. 后缀名。<br/>
     &nbsp;&nbsp;&nbsp;&nbsp;3. 包名。<br/>
     &nbsp;&nbsp;&nbsp;&nbsp;4. 文件名后缀。<br/>
-  4. 自定义内容，将替换模版内#{}内同名的字符 --参考模版说明
+  4. 自定义内容，将替换模版内#{}内同名的字符 --参考模版说明<br/>
 **模版说明**<br/>
 模版文件在`/template`包下。
 下面举一个例子🌰：
@@ -54,6 +54,9 @@ public class #{UrestName}Restful extends BaseRestful{
 }
 ```
 这是`testRestful`目录下的模版文件，一目了然，`#{}`及其内部的内容将会被定义在`setting.yaml`中的文件所替换。<br/>
-其中有一些特殊的将在下面列举出来，在定义`setting.yaml`时不能使用相同的名字。
-- `#{nowPath}`:当前包的位置
-- `#{importPath}`:`setting.yaml`下
+其中有一些特殊的将在下面列举出来，在定义`setting.yaml`时注意避免与这些规则冲突。
+- `#{nowPath}`:当前包的位置。
+- `#{importPath}`:递归的目录的叠加。
+- `#{date}`:当前日期。
+- 任何的`#{}`中的第一个字母为大写的"U"，替换后的内容首字母会大写。
+- 如果`#{}`的内容没有在`setting.yaml`
