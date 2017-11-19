@@ -42,7 +42,11 @@ public class GenerateDirOrFile {
             for (int i = 0; i < waitForGenerate.size(); i++) {
 
                 if (waitForGenerate.get(i) instanceof Map) {
+                    //feature:逗号分隔，所以这里取第一个逗号前的字符串作文文件名／／TODO:测试
                     String addPath = path + separator + ((Map) waitForGenerate.get(i)).keySet().iterator().next();
+                    String[] addPaths=addPath.split(",");
+                    addPath=addPaths[0];
+                    System.out.println("建立文件夹s：" + addPaths);
                     System.out.println("建立文件夹：" + addPath);
                     File f = new File(addPath);
                     if (!f.exists()) {
@@ -55,6 +59,10 @@ public class GenerateDirOrFile {
                             nowPack = (String) b;
                         }
                         System.err.println(((ArrayList) s));
+                        String[] nowPacks=nowPack.split(",");
+                        //TODO:测试
+                        nowPack=nowPacks[0];
+                        System.out.println("sss"+nowPacks);
                         deepSearchAndMake((ArrayList) s, addPath, tempName, type, genrealPath, genrealPath + "." + willAddPath + nowPack,exName);
                     }
                 } else {
@@ -97,7 +105,12 @@ public class GenerateDirOrFile {
             j = f1.read();
         }
         String parse = ss.parse(s);
-        writeTelplate(path, (String) waitForGenerate.get(i), "." + type, parse,exName);
+        //循环逗号分隔的名字生成文件//TODO:测试
+        String[] tempNames=((String) waitForGenerate.get(i)).split(",");
+        for (int k=0;i<tempNames.length;i++){
+            writeTelplate(path, tempNames[k], "." + type, parse,exName);
+        }
+
         f1.close();
     }
 

@@ -1,12 +1,12 @@
 tempName:
   - login:
-    - rePwd
+    - rePwd,getPw
     - verification
     - userSetting
   - service:
     - getSomething
     - setSomething:
-      - manyDir1
+      - manyDir1,getPw
       - mangDir2
 generalAbsPath:
    - /Users/sr/Documents/demoDir/testRestful
