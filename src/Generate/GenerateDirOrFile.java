@@ -75,7 +75,7 @@ public class GenerateDirOrFile {
     public void makeAndWrite(ArrayList waitForGenerate, String genrealPath, String willAddPath, String path, int i, String type, String addPath, String tempName,String exName) throws Exception {
         System.out.println("建立文件夹及文件：" + addPath);
         File f = new File(addPath);
-        f.mkdir();
+        f.mkdirs();
         HandlerImpl handler = new HandlerImpl((String) waitForGenerate.get(i));
         if (willAddPath.equals("")) {
             handler.setThisPath(genrealPath + "." + waitForGenerate.get(i));
