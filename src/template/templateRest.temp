@@ -15,10 +15,10 @@ import javax.annotation.Resource;
  * @author #{author} #{date}#{secondAu}
  */
 @RestController
-@RequestMapping("/app/#{restName}eRestful")
+@RequestMapping("/#{restName}eRestful")
 public class #{UrestName}Restful extends BaseRestful{
     @Resource
-    private #{UmapperName}Mapper homeThreeMapper;
+    private #{UmapperName}Mapper #{mapperName}Mapper;
 
     /**
      *

@@ -1,24 +1,18 @@
 tempName:
-  - login:
-    - rePwd,getPw
-    - verification
-    - userSetting
-  - service:
-    - getSomething
-    - setSomething:
-      - manyDir1,getPw
-      - mangDir2
+  - auditMange:
+    - activityReviewAudit
+    - venueAudit
 generalAbsPath:
-   - /Users/sr/Documents/demoDir/testRestful
-   - /Users/sr/Documents/demoDir/testMapper
-   - /Users/sr/Documents/demoDir/testXmlMapper
+   - /Users/sr/Documents/javaSpace/wenlehui/01Develop/wenhuayunServer/src/main/java/com/maryun/wenhuayun/restful
+   - /Users/sr/Documents/javaSpace/wenlehui/01Develop/wenhuayunServer/src/main/java/com/maryun/wenhuayun/mapper
+   - /Users/sr/Documents/javaSpace/wenlehui/01Develop/wenhuayunServer/src/main/resources/mapper/wenhuayun
+   - /Users/sr/Documents/javaSpace/wenlehui/01Develop/wenhuayunWeb/src/main/java/com/maryun/wenhuayun/controller
 templateName:
-  - templateRest.temp,java,com.maryun.ruogucaotang.restful.app.franchisee,Restful
-  - templateMapper.temp,java,com.maryun.ruogucaotang.mapper.app.franchisee,Mapper
-  - templateXml.temp,xml,com.maryun.ruogucaotang.mapper.app.franchisee,Mapper
+  - tempServerRestCURD.temp,java,com.maryun.wenhuayun.restful,Restful
+  - tempServerMapperCURD.temp,java,com.maryun.wenhuayun.mapper,Mapper
+  - tempServerXmlCURD.temp,xml,com.maryun.wenhuayun.mapper,Mapper
+  - tempWebControllerCURD.temp,java,com.maryun.wenhuayun.controller,Controller
 mapperPackage:
-  com.maryun.ruogucaotang.mapper.app.franchisee
+  com.maryun.wenhuayun.mapper
 author:
   sr
-secondAu:
-  syl
