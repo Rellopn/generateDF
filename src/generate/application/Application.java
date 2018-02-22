@@ -68,7 +68,7 @@ public class Application {
     private void getListener() {
         this.listener = new DefaultListener();
         File file = new File(System.getProperty("user.dir") + File.separator + "src" + File.separator +
-                "generate1" + File.separator + "customEventHandle");
+                "generate" + File.separator + "customEventHandle");
         String[] list = file.list();
         List<CustomObserver> customObservers = new ArrayList<>();
         try {
@@ -86,11 +86,5 @@ public class Application {
             e.printStackTrace();
         }
         this.listener.observers = customObservers;
-    }
-
-    public static void main(String[] args) {
-//        new Application();
-        ClassLoader classLoader = Application.class.getClassLoader();
-        System.out.println(classLoader.getParent());
     }
 }

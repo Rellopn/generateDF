@@ -85,6 +85,8 @@ public class HandleMultipleSetting {
     private void choiceGenerateType(String nowPath, String absolutePath, String tempName, String type, String javaPackagePathAdd, String stuffix, String increasePath) {
         if (type.equals("java")) {
             generateFByType = new GenerateForJava();
+        } else if (type.equals("xml")) {
+            generateFByType = new GenerateForXmlMapper();
         } else {
             System.err.println("当前没有匹配的处理器，请检查文件类型是否正确。如果检查无误还是有这个错误，请编写类继承GenerateFByType接口,当前文件类型：" + type);
             return;
