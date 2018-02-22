@@ -1,4 +1,5 @@
-package Generate;
+package generate.generateDF;
+
 
 /**
  * 解析#{}中的字符串并替换
@@ -6,7 +7,7 @@ package Generate;
  * 2017/10/3
  *
  */
-public class Parse{
+public class Parse {
 
     /**
      * 开始符

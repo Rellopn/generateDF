@@ -1,0 +1,18 @@
+package #{nowPath};
+
+import org.apache.ibatis.annotations.Mapper;
+import com.maryun.model.PageData;
+
+import java.util.List;
+/**
+ * @author #{author} #{date}
+ *
+ */
+@Mapper
+public interface #{UmapperName}Mapper {
+    List<PageData> list(PageData pd);
+    PageData findById(PageData pd);
+    PageData saveAdd(PageData pd);
+    void saveEdit(PageData pd);
+    void delete(String[] ids);
+}

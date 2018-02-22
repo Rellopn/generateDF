@@ -1,0 +1,98 @@
+package #{nowPath};
+
+import com.maryun.model.PageData;
+import com.maryun.restful.base.BaseRestful;
+import #{mapperPackage}#{importPath}.#{UmapperName}Mapper;
+import com.maryun.utils.WebResult;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import javax.annotation.Resource;
+import com.github.pagehelper.PageHelper;
+
+import java.util.List;
+/**
+ * @Descriptkon
+ *
+ * @author #{author} #{date}#{secondAu}
+ */
+@RestController
+@RequestMapping("/#{restName}Restful")
+public class #{UrestName}Restful extends BaseRestful{
+    @Resource
+    private #{UmapperName}Mapper #{mapperName}Mapper;
+
+    /**
+     * @Description: 查询和列表
+     * @param pd
+     * @return Object
+     * @throws Exception
+    */
+    @RequestMapping("list")
+    public PageData list(@RequestBody PageData pd) throws Exception{
+        if (pd.getPageNumber() != 0) {
+            PageHelper.startPage(pd.getPageNumber(), pd.getPageSize());
+        }
+        List<PageData> list = #{mapperName}Mapper.list(pd);
+        //分页
+        pd=this.getPagingPd(list);
+        return WebResult.requestSuccess(pd);
+    }
+
+    /**
+     * @Description: 去修改页面
+     * @param pd
+     * @return Object
+     * @throws Exception
+    */
+    @RequestMapping(value = "/toEdit")
+    public Object toEdit(@RequestBody PageData pd) throws Exception {
+        // 根据ID读取信息
+        PageData findByIdPd = #{mapperName}Mapper.findById(pd);
+        return WebResult.requestSuccess(findByIdPd);
+    }
+
+    /**
+     * @Description: 保存添加
+     * @param pd
+     * @return Object
+     * @throws Exception
+     */
+    @RequestMapping(value = "/saveAdd")
+    public Object saveAdd(@RequestBody PageData pd) throws Exception {
+        #{mapperName}Mapper.saveAdd(pd);
+        return WebResult.requestSuccess(pd);
+    }
+
+    /**
+     * @Description: 保存修改
+     * @param pd
+     * @return Object
+     * @throws Exception
+     */
+     @RequestMapping(value="/saveEdit")
+     public Object saveEdit(@RequestBody PageData pd) throws Exception{
+        #{mapperName}Mapper.saveEdit(pd);
+        pd.put("msg", "success");
+    	return WebResult.requestSuccess(pd);
+     }
+
+	/**
+	 * @Description:批量删除
+     * @param pd
+     * @return Object
+     * @throws Exception
+     */
+	@RequestMapping(value="/delete")
+	public Object delete(@RequestBody PageData pd) throws Exception{
+	    //String BUTTON_IDS = pd.getString("IDS");
+    	//if (null != BUTTON_IDS && !"".equals(BUTTON_IDS)) {
+        //    String ArrayBUTTON_IDS[] = BUTTON_IDS.split(",");
+        //    #{mapperName}Mapper.delete();
+        //    pd.put("msg", "success");
+        //}else{
+        //  pd.put("msg", "failed");
+        //}
+	    return WebResult.requestSuccess(pd);
+	}
+}

@@ -1,0 +1,127 @@
+package #{nowPath};
+
+import com.maryun.controller.base.BaseController;
+import com.maryun.model.PageData;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+/**
+ * @author #{author}
+ * @decription:
+ * @date； #{date}
+ */
+@Controller
+@RequestMapping("/activeRecommend")
+public class #{UrestName}Controller extends BaseController {
+    /**
+     * return list view.
+     *
+     * @return
+     */
+    @RequestMapping("list")
+    ModelAndView getactiveRecommendList() {
+        //TODO: set viewName
+        return new ModelAndView("");
+    }
+
+    /**
+     * search page
+     *
+     * @return
+     */
+    @RequestMapping(value = "/pageSearch")
+    @ResponseBody
+    public Object pageSearch() throws Exception {
+        PageData pd = this.getPageData();
+        //TODO: set request path
+        return this.pd(systemServer + "", pd);
+    }
+
+    /**
+     * get unit and active associated
+     *
+     * @return
+     */
+    @RequestMapping(value = "/getAssociatedActive")
+    @ResponseBody
+    public Object getAssociatedActive() throws Exception {
+        PageData pd = this.getPageData();
+        //TODO: set request path
+        return this.pd(systemServer + "", pd);
+    }
+
+    /**
+     * jump to add page
+     *
+     * @return
+     */
+    @RequestMapping(value = "/toAdd")
+    public ModelAndView toAdd() {
+        //TODO: set viewName
+        return new ModelAndView("");
+    }
+
+
+    /**
+     * jump to edit page
+     *
+     * @return
+     */
+    @RequestMapping(value = "/toEdit")
+    public ModelAndView toEdit() throws Exception {
+        PageData pd = this.getPageData();
+        //TODO: set request path  and set viewName
+        return this.viewAndPd("", systemServer + "", pd);
+    }
+
+    /**
+     * save add
+     *
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value = "/saveAdd")
+    @ResponseBody
+    public Object saveAdd() throws Exception {
+        PageData pd = this.getPageData();
+        pd = this.savePage(pd);
+        PageData user = this.getUser();
+        pd.put("UPDATE_UID", user.getString("USER_ID"));
+        pd.put("CREATE_UID", user.getString("USER_ID"));
+        //TODO: set request path
+        return this.pd(systemServer + "", pd);
+    }
+
+    /**
+     * save edit
+     *
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value = "/saveEdit")
+    @ResponseBody
+    public Object saveEdit() throws Exception {
+        PageData pd = this.getPageData();
+        PageData user = this.getUser();
+        pd.put("UPDATE_UID", user.getString("USER_ID"));
+        //TODO: set request path
+        return this.pd(systemServer + "", pd);
+    }
+
+    /**
+     * delete
+     *
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value = "/toDelete")
+    @ResponseBody
+    public Object toDelete() throws Exception {
+        PageData pd = this.getPageData();
+        //TODO: set request path
+        return this.pd(systemServer + "", pd);
+    }
+}

@@ -1,24 +1,46 @@
 tempName:
-  - login:
-    - rePwd
-    - verification
-    - userSetting
-  - service:
-    - getSomething
-    - setSomething:
-      - manyDir1
-      - mangDir2
+  - auditMange:
+    - the1:
+      - i1:
+        - j1,
+        - j2
+      - i2:
+        - k1
+        - k2
+    - venueAudit:
+      - o1
+      - o2
+    - ssss:
+      - dd:
+        - pp:
+          - qq
+          - ee:
+            - tt
 generalAbsPath:
-   - /Users/sr/Documents/demoDir/testRestful
-   - /Users/sr/Documents/demoDir/testMapper
-   - /Users/sr/Documents/demoDir/testXmlMapper
+   - /Users/sr/Documents/demoDir/test/restful
+   - /Users/sr/Documents/demoDir/test/mapper
+   - /Users/sr/Documents/demoDir/test/xml
 templateName:
-  - templateRest.temp,java,com.maryun.ruogucaotang.restful.app.franchisee,Restful
-  - templateMapper.temp,java,com.maryun.ruogucaotang.mapper.app.franchisee,Mapper
-  - templateXml.temp,xml,com.maryun.ruogucaotang.mapper.app.franchisee,Mapper
+  - tempServerRestCURD.temp,
+  - tempServerMapperCURD.temp
+  - tempServerXmlCURD.temp
+  - tempWebControllerCURD.temp
+fileType:
+  - java
+  - java
+  - xml
+  - java
+packageName:
+  - com.maryun.wenhuayun.restful
+  - com.maryun.wenhuayun.mapper
+  - com.maryun.wenhuayun.mapper
+  - com.maryun.wenhuayun.controller
+stuffix:
+  - Restful
+  - Mapper
+  - Mapper
+  - Controller
 mapperPackage:
-  com.maryun.ruogucaotang.mapper.app.franchisee
+  com.maryun.wenhuayun.mapper
 author:
   sr
-secondAu:
-  syl
