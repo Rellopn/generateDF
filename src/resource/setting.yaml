@@ -1,17 +1,45 @@
 tempName:
   - auditMange:
-    - activityReviewAudit
-    - venueAudit
+    - the1:
+      - i1:
+        - j1,
+        - j2
+      - i2:
+        - k1
+        - k2
+    - venueAudit:
+      - o1
+      - o2
+    - ssss:
+      - dd:
+        - pp:
+          - qq
+          - ee:
+            - tt
 generalAbsPath:
-   - /Users/sr/Documents/javaSpace/wenlehui/01Develop/wenhuayunServer/src/main/java/com/maryun/wenhuayun/restful
-   - /Users/sr/Documents/javaSpace/wenlehui/01Develop/wenhuayunServer/src/main/java/com/maryun/wenhuayun/mapper
-   - /Users/sr/Documents/javaSpace/wenlehui/01Develop/wenhuayunServer/src/main/resources/mapper/wenhuayun
-   - /Users/sr/Documents/javaSpace/wenlehui/01Develop/wenhuayunWeb/src/main/java/com/maryun/wenhuayun/controller
+   - /Users/sr/Documents/demoDir/test/restful
+   - /Users/sr/Documents/demoDir/test/mapper
+   - /Users/sr/Documents/demoDir/test/xml
 templateName:
-  - tempServerRestCURD.temp,java,com.maryun.wenhuayun.restful,Restful
-  - tempServerMapperCURD.temp,java,com.maryun.wenhuayun.mapper,Mapper
-  - tempServerXmlCURD.temp,xml,com.maryun.wenhuayun.mapper,Mapper
-  - tempWebControllerCURD.temp,java,com.maryun.wenhuayun.controller,Controller
+  - tempServerRestCURD.temp,
+  - tempServerMapperCURD.temp
+  - tempServerXmlCURD.temp
+  - tempWebControllerCURD.temp
+fileType:
+  - java
+  - java
+  - xml
+  - java
+packageName:
+  - com.maryun.wenhuayun.restful
+  - com.maryun.wenhuayun.mapper
+  - com.maryun.wenhuayun.mapper
+  - com.maryun.wenhuayun.controller
+stuffix:
+  - Restful
+  - Mapper
+  - Mapper
+  - Controller
 mapperPackage:
   com.maryun.wenhuayun.mapper
 author:

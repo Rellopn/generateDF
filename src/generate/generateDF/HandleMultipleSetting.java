@@ -43,7 +43,7 @@ public class HandleMultipleSetting {
                 String nowStuffix = getNowStr(stuffix, i);
 
 
-                choiceGenerateType(willHandlePath, absolutePath, nowTempName, nowType, javaPackagePathAdd, nowStuffix, increasePath);
+                choiceGenerateType(splitWillHandlePath[i], absolutePath, nowTempName, nowType, javaPackagePathAdd, nowStuffix, increasePath);
             }
         } else {
             String nowTempName = getNowStr(tempName, 0);
