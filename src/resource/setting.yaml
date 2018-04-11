@@ -44,3 +44,9 @@ mapperPackage:
   com.maryun.wenhuayun.mapper
 author:
   sr
+db: true
+dbsetting:
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/test
+  username: root
+  password: 123456

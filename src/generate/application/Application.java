@@ -16,13 +16,17 @@ import java.util.List;
  */
 public class Application {
 
+    //开启匹配数据库字段，匹配规则，如果配置文件夹时有 ‘-‘ 符号 则认为 - 符号后面的是数据库对应表名.如果没有 - 符号 而且配置
+    //文件中开启了数据库匹配，则认为当前的名字为数据库表名
+    public static boolean dbPattern = false;
+
     //判断是不是java文件。java文件要求输入当前的包名。
     public boolean isJavaFile = true;
 
     //判断当前环境是不是从web启动的
     public boolean webEnvironment = true;
 
-    private final ConfigField cf = ConfigField.getConfield();
+    public final ConfigField cf = ConfigField.getConfield();
     //从哪里加载setting。
 
     //LOACL_SETTING:本地setting文件,LOCAL_CLASS:java方式配置，REMOTE:网络.默认本地
@@ -34,7 +38,7 @@ public class Application {
         InitApplication();
     }
 
-    //初始化项目，目前只想有一个监听器。listener
+    //初始化项目，目前只有一个监听器。listener
     public void InitApplication() {
         //加载 listener
         getListener();

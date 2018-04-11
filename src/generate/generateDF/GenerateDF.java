@@ -51,9 +51,9 @@ public class GenerateDF {
                 if (willHandlePath instanceof Map){
                     hashMap = (HashMap)willHandlePath;
                 }else {
-                    System.out.println("到底层了，最后一层是，将要生成文件夹及文件："+(String)willHandlePath);
-                    System.out.println("文件夹及文件生成的路径是"+absolutePath+ File.separator+(String) willHandlePath);
-                    System.out.println("package是 "+javaPackagePathAdd+"."+(String) willHandlePath);
+//                    System.out.println("到底层了，最后一层是，将要生成文件夹及文件："+(String)willHandlePath);
+//                    System.out.println("文件夹及文件生成的路径是"+absolutePath+ File.separator+(String) willHandlePath);
+//                    System.out.println("package是 "+javaPackagePathAdd+"."+(String) willHandlePath);
                     makeDir(absolutePath);
                     handleMultipleSetting.handleMutipleSetting((String) willHandlePath,absolutePath,tempName,type,javaPackagePathAdd,stuffix,nowDeep);
                     continue;
@@ -62,9 +62,9 @@ public class GenerateDF {
                 Iterator iterator = hashMap.keySet().iterator();
                 while (iterator.hasNext()){
                     String theNext = (String)iterator.next();
-                    System.out.println("将要生成文件夹"+theNext);
-                    System.out.println("文件夹生成的路径是"+absolutePath+ File.separator+theNext);
-                    System.out.println("package是 "+javaPackagePathAdd+"."+theNext);
+//                    System.out.println("将要生成文件夹"+theNext);
+//                    System.out.println("文件夹生成的路径是"+absolutePath+ File.separator+theNext);
+//                    System.out.println("package是 "+javaPackagePathAdd+"."+theNext);
                     //当前目录的层级
                     String addNowDeep=nowDeep+"."+theNext;
                     // 绝对路径+当前层级的目录
